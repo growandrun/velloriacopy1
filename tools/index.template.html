@@ -111,7 +111,7 @@ p{margin:0}
 .hero .arc circle:nth-of-type(1){animation-delay:1.6s}
 .hero .arc circle:nth-of-type(2){animation-delay:1.9s}
 .hero .arc circle:nth-of-type(3){animation-delay:2.2s}
-.hero h1{font-family:var(--suit);font-weight:800;font-size:clamp(40px,9.5vw,86px);line-height:1.14;letter-spacing:-.038em;color:var(--ink)}
+.hero h1{font-family:var(--suit);font-weight:800;font-size:clamp(24px,4.2vw,42px);line-height:1.4;letter-spacing:-.022em;color:var(--ink)}
 .hero h1 .ln{display:block;overflow:hidden}
 .hero h1 .ln>span{display:inline-block;transform:translateY(115%);animation:rise-in .9s var(--ease) forwards}
 .hero h1 .ln:nth-child(1)>span{animation-delay:.15s}
@@ -130,7 +130,7 @@ p{margin:0}
 .scrollcue .t{font-family:var(--scd);font-weight:500;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink3)}
 .scrollcue .ln{width:1px;height:40px;background:var(--line);position:relative;overflow:hidden}
 .scrollcue .ln::after{content:"";position:absolute;top:-40px;left:0;width:1px;height:40px;background:var(--ink);animation:cue 1.8s var(--ease) infinite}
-.hero-lead{font-family:var(--suit);font-weight:300;font-size:clamp(15px,2vw,19.5px);line-height:1.65;letter-spacing:-.01em;color:var(--ink2);margin:clamp(20px,2.6vw,28px) 0 0;opacity:0;animation:fade-up .9s ease .55s forwards}
+.hero-lead{font-family:var(--suit);font-weight:300;font-size:clamp(15px,2vw,19.5px);line-height:1.65;letter-spacing:-.01em;color:var(--ink2);margin:0 0 clamp(14px,2vw,20px);opacity:0;animation:fade-up .9s ease .15s forwards}
 
 /* manifesto */
 .manifesto-sec{padding:clamp(46px,7vw,84px) 0 clamp(56px,8vw,96px)}
@@ -150,11 +150,6 @@ html.js [data-reveal="right"]{transform:translateX(34px)}
 html.js [data-reveal="clip"]{clip-path:inset(0 0 100% 0)}
 [data-reveal].in{opacity:1;transform:none;clip-path:inset(0 0 0 0)}
 
-/* animated underline on headings */
-.u{position:relative;display:inline-block;padding-bottom:3px}
-.u::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:100%;background:currentColor;
-  transform:scaleX(0);transform-origin:left;transition:transform 1s var(--ease) .25s}
-.in .u::after,[data-reveal].in.u::after{transform:scaleX(1)}
 
 /* image slots (replace with real photography) */
 .slot{position:relative;overflow:hidden;border:1px dashed #CFCDC8;border-radius:6px;background:#FAFAF8;
@@ -338,8 +333,11 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
     </svg>
     <p class="eyebrow">Quiet Luxury</p>
     <div class="spacer"></div>
-    <h1><span class="ln"><span>우아함은 선택이다</span></span></h1>
-    <p class="hero-lead">비싼 주얼리가 당신을 우아하게 만들지는 않습니다.</p>
+    <p class="hero-lead">우아함은 선택이다</p>
+    <h1>
+      <span class="ln"><span>비싼 주얼리가 당신을</span></span>
+      <span class="ln"><span>우아하게 만들지는 않습니다.</span></span>
+    </h1>
     <div class="scrollcue"><span class="t">Scroll</span><span class="ln"></span></div>
   </div>
 </section>
@@ -401,7 +399,7 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
       <div>
         <p class="eyebrow" data-reveal="up">The Difference</p>
         <div class="spacer"></div>
-        <h2 data-reveal="up" style="--d:.06s"><span class="u">팔찌 하나로,</span><br>옷차림의 분위기가 달라집니다.</h2>
+        <h2 data-reveal="up" style="--d:.06s">팔찌 하나로,<br>옷차림의 분위기가 달라집니다.</h2>
         <div class="rule l" data-reveal="scale" style="--d:.12s"></div>
         <div class="copy" data-reveal="up" style="--d:.16s">
           <p>새 옷을 사지 않아도, 과하게 꾸미지 않아도, 손목 위 작은 디테일 하나로 전체 인상은 달라질 수 있습니다.</p>
@@ -424,7 +422,7 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
       <div>
         <p class="eyebrow" data-reveal="up">Up Close</p>
         <div class="spacer"></div>
-        <h2 data-reveal="up" style="--d:.06s">과하지 않지만,<br><span class="u">가까이 볼수록 예쁜 팔찌.</span></h2>
+        <h2 data-reveal="up" style="--d:.06s">과하지 않지만,<br>가까이 볼수록 예쁜 팔찌.</h2>
         <div class="rule l" data-reveal="scale" style="--d:.12s"></div>
         <div class="copy" data-reveal="up" style="--d:.16s">
           <p>이 팔찌는 한눈에 시선을 빼앗는 화려함보다 오래 볼수록 손이 가는 은은함에 집중했습니다. 손목 위에서 자연스럽게 이어지는 라인, 데일리룩에 부담 없이 어울리는 광택감, 단독으로 착용해도 허전하지 않은 존재감.</p>
@@ -462,10 +460,6 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
       <div class="c"><div class="t">원피스</div><div class="d">우아하게</div></div>
       <div class="c"><div class="t">데님</div><div class="d">가볍지만 세련되게</div></div>
     </div>
-    <div class="marquee" aria-hidden="true"><div class="track">
-      <span>Soft Knit</span><span>·</span><span><b>Clean Shirt</b></span><span>·</span><span>Elegant Date</span><span>·</span><span><b>Casual Denim</b></span><span>·</span>
-      <span>Soft Knit</span><span>·</span><span><b>Clean Shirt</b></span><span>·</span><span>Elegant Date</span><span>·</span><span><b>Casual Denim</b></span><span>·</span>
-    </div></div>
     <div class="lookgrid">
       <div class="look" data-reveal="up" style="--d:0s"><div class="slot tall"><span class="id">IMG-04</span><div class="d">크림색 니트 소매 사이 손목 클로즈업, 따뜻한 자연광</div></div><div class="name">Soft Knit Look</div></div>
       <div class="look" data-reveal="up" style="--d:.08s"><div class="slot tall"><span class="id">IMG-05</span><div class="d">흰 셔츠 소매 살짝 걷은 손목, 책상·다이어리 배경</div></div><div class="name">Clean Shirt Look</div></div>
