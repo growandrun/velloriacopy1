@@ -21,6 +21,7 @@ FACES = {
     "__SUIT_LIGHT__":    "SUIT-Light.otf",
     "__SUIT_MEDIUM__":   "SUIT-Medium.otf",
     "__SUIT_SEMIBOLD__": "SUIT-SemiBold.otf",
+    "__SUIT_EXTRABOLD__": "SUIT-ExtraBold.otf",
     "__PRE_REGULAR__":   "Pretendard-Regular.otf",
     "__PRE_MEDIUM__":    "Pretendard-Medium.otf",
     "__SCD5__":          "SCDream5.otf",

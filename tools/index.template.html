@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Velloria — 손목 위 조용한 우아함</title>
-<meta name="description" content="우아함은 가격이 아니라 선택에서 시작됩니다. 좋은 취향이 당신을 우아하게 만듭니다 — 데일리 주얼리 Velloria.">
+<title>Velloria — 우아함은 선택이다</title>
+<meta name="description" content="우아함은 선택이다. 비싼 주얼리가 아니라 좋은 취향이 당신을 우아하게 만듭니다 — 데일리 주얼리 Velloria.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="format-detection" content="telephone=no">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Velloria — 손목 위 조용한 우아함">
-<meta property="og:description" content="비싼 주얼리가 아니라 좋은 취향이 당신을 우아하게 만듭니다. 데일리 주얼리, Velloria.">
+<meta property="og:title" content="Velloria — 우아함은 선택이다">
+<meta property="og:description" content="우아함은 가격표가 아니라 당신의 선택에서 시작됩니다. 데일리 주얼리, Velloria.">
 <meta property="og:locale" content="ko_KR">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23141414'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='18' fill='%23fff' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
 <script>document.documentElement.classList.add('js')</script>
@@ -17,6 +17,7 @@
 @font-face{font-family:"SUIT";font-style:normal;font-weight:300;font-display:swap;src:url(__SUIT_LIGHT__) format("woff2")}
 @font-face{font-family:"SUIT";font-style:normal;font-weight:500;font-display:swap;src:url(__SUIT_MEDIUM__) format("woff2")}
 @font-face{font-family:"SUIT";font-style:normal;font-weight:600;font-display:swap;src:url(__SUIT_SEMIBOLD__) format("woff2")}
+@font-face{font-family:"SUIT";font-style:normal;font-weight:800;font-display:swap;src:url(__SUIT_EXTRABOLD__) format("woff2")}
 @font-face{font-family:"Pretendard";font-style:normal;font-weight:400;font-display:swap;src:url(__PRE_REGULAR__) format("woff2")}
 @font-face{font-family:"Pretendard";font-style:normal;font-weight:500;font-display:swap;src:url(__PRE_MEDIUM__) format("woff2")}
 @font-face{font-family:"SCoreDream";font-style:normal;font-weight:500;font-display:swap;src:url(__SCD5__) format("woff2")}
@@ -110,13 +111,13 @@ p{margin:0}
 .hero .arc circle:nth-of-type(1){animation-delay:1.6s}
 .hero .arc circle:nth-of-type(2){animation-delay:1.9s}
 .hero .arc circle:nth-of-type(3){animation-delay:2.2s}
-.hero h1{font-family:var(--suit);font-weight:600;font-size:clamp(30px,6vw,60px);line-height:1.28;letter-spacing:-.026em;color:var(--ink)}
+.hero h1{font-family:var(--suit);font-weight:800;font-size:clamp(40px,9.5vw,86px);line-height:1.14;letter-spacing:-.038em;color:var(--ink)}
 .hero h1 .ln{display:block;overflow:hidden}
 .hero h1 .ln>span{display:inline-block;transform:translateY(115%);animation:rise-in .9s var(--ease) forwards}
 .hero h1 .ln:nth-child(1)>span{animation-delay:.15s}
 .hero h1 .ln:nth-child(2)>span{animation-delay:.3s}
 .hero h1 .ln:nth-child(3)>span{animation-delay:.45s}
-.hero h1 b{font-weight:600}
+.hero h1 b{font-weight:800}
 .hero .sub{opacity:0;animation:fade-up 1s ease .7s forwards;max-width:600px;margin-left:auto;margin-right:auto}
 .hero .herocta{opacity:0;animation:fade-up 1s ease .95s forwards}
 .adv{display:flex;flex-wrap:wrap;gap:0;justify-content:center;margin:42px auto 0;max-width:760px;border-top:1px solid var(--line)}
@@ -129,13 +130,14 @@ p{margin:0}
 .scrollcue .t{font-family:var(--scd);font-weight:500;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink3)}
 .scrollcue .ln{width:1px;height:40px;background:var(--line);position:relative;overflow:hidden}
 .scrollcue .ln::after{content:"";position:absolute;top:-40px;left:0;width:1px;height:40px;background:var(--ink);animation:cue 1.8s var(--ease) infinite}
-.hero-lead{font-family:var(--suit);font-weight:300;font-size:clamp(15px,2vw,19px);line-height:1.6;letter-spacing:-.01em;color:var(--ink2);margin:0 0 18px;opacity:0;animation:fade-up .9s ease .1s forwards}
+.hero-lead{font-family:var(--suit);font-weight:300;font-size:clamp(15px,2vw,19.5px);line-height:1.65;letter-spacing:-.01em;color:var(--ink2);margin:clamp(20px,2.6vw,28px) 0 0;opacity:0;animation:fade-up .9s ease .55s forwards}
 
 /* manifesto */
 .manifesto-sec{padding:clamp(46px,7vw,84px) 0 clamp(56px,8vw,96px)}
 .manifesto{font-family:var(--suit);font-weight:300;font-size:clamp(19px,2.6vw,27px);line-height:1.6;letter-spacing:-.018em;color:var(--ink2);margin:0}
 .manifesto+.manifesto{margin-top:clamp(22px,3.4vw,34px)}
 .manifesto.brand{color:var(--ink);font-weight:500}
+.manifesto b{color:var(--ink);font-weight:500}
 .manifesto.climax{color:var(--ink);font-weight:600;font-size:clamp(24px,3.8vw,38px);letter-spacing:-.024em;margin-top:clamp(10px,1.6vw,16px)}
 
 /* reveal system — progressive: hidden state applies only when JS is active (html.js),
@@ -336,11 +338,8 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
     </svg>
     <p class="eyebrow">Quiet Luxury</p>
     <div class="spacer"></div>
-    <p class="hero-lead">비싼 주얼리가 당신을<br>우아하게 만드는 것은 아닙니다.</p>
-    <h1>
-      <span class="ln"><span>좋은 취향이 당신을</span></span>
-      <span class="ln"><span>우아하게 만듭니다.</span></span>
-    </h1>
+    <h1><span class="ln"><span>우아함은 선택이다</span></span></h1>
+    <p class="hero-lead">비싼 주얼리가 당신을 우아하게 만들지는 않습니다.</p>
     <div class="scrollcue"><span class="t">Scroll</span><span class="ln"></span></div>
   </div>
 </section>
@@ -348,13 +347,12 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
 <!-- 1b. 브랜드 선언 (manifesto) -->
 <section class="manifesto-sec">
   <div class="wrap narrow center">
-    <p class="manifesto" data-reveal="up">진짜 매력 있는 사람들은<br>가격보다 가치를 선택합니다.</p>
-    <p class="manifesto" data-reveal="up" style="--d:.06s">과시를 위해 소비하지 않고,<br>자신에게 어울리는 것을 고를 줄 압니다.</p>
-    <p class="manifesto brand" data-reveal="up" style="--d:.12s">Velloria는 그런 선택을 위해 만들어졌습니다.</p>
-    <p class="manifesto" data-reveal="up" style="--d:.06s">수백만 원의 명품이 아니어도,<br>충분히 아름다울 수 있다는 것.</p>
-    <p class="manifesto" data-reveal="up" style="--d:.12s">합리적인 가격으로<br>당신의 품격을 표현할 수 있다는 것.</p>
+    <p class="manifesto" data-reveal="up">당신을 우아하게 만드는 건, 좋은 취향입니다.<br>매력 있는 사람은 가격이 아니라 가치를 봅니다.</p>
+    <p class="manifesto" data-reveal="up" style="--d:.08s">과시하기 위해 사지 않고, 자신에게 어울리는 것을 고를 줄 압니다.<br><b>Velloria는 그런 선택을 위해 만들어졌습니다.</b></p>
+    <p class="manifesto" data-reveal="up" style="--d:.06s">수백만 원의 명품이 아니어도<br>충분히 아름다울 수 있다는 것,</p>
+    <p class="manifesto" data-reveal="up" style="--d:.12s">합리적인 가격으로도<br>당신의 품격은 분명하다는 것.</p>
     <div class="rule" data-reveal="scale" style="--d:.16s"></div>
-    <p class="manifesto climax" data-reveal="up" style="--d:.1s">우아함은 가격이 아니라<br>선택에서 시작됩니다.</p>
+    <p class="manifesto climax" data-reveal="up" style="--d:.1s">우아함은 가격표가 아니라,<br>당신의 선택에서 시작됩니다.</p>
   </div>
 </section>
 
@@ -614,7 +612,7 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
     <div class="spacer"></div>
     <h2 data-reveal="up" style="--d:.06s;font-weight:300;font-size:clamp(26px,4.4vw,44px)">진짜 매력은<br>비싼 척에서 나오지 않습니다.</h2>
     <div class="rule" data-reveal="scale" style="--d:.12s;background:#fff"></div>
-    <p class="poetic" data-reveal="up" style="--d:.16s">비싸지 않아도 충분히 아름답게.<br>과하지 않아 더 오래 손이 가게.<br><b>우아함은, 당신의 선택에서 시작됩니다.</b></p>
+    <p class="poetic" data-reveal="up" style="--d:.16s">비싸지 않아도 충분히 아름답게.<br>과하지 않아 더 오래 손이 가게.<br><b>우아함은, 선택입니다.</b></p>
     <div class="spacer"></div>
     <div class="slot wide" data-reveal="up" style="--d:.2s;max-width:560px;margin:0 auto"><span class="id">IMG-09</span><div class="d">검은 배경 위 팔찌가 은은하게 빛나는 클로즈업. 원석·금속 광택 선명. 첫 화면보다 조금 더 가까이 — “갖고 싶다”는 감정이 들도록.</div></div>
     <div class="spacer-l"></div>
