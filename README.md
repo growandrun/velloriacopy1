@@ -32,9 +32,9 @@ velloriacopy1/
 
 이 페이지는 **콘텐츠 원칙(허위·과장 금지)** 을 지키도록, 확인되지 않은 정보는 비워두거나 “예시”로 표시해 두었습니다. 라이브 트래픽을 보내기 전에 아래를 채워주세요.
 
-1. **구매 CTA 링크 (eBay 임시 placeholder · 4곳)**
+1. **구매 CTA 링크 (eBay 임시 placeholder · 3곳)**
    현재 모든 구매 버튼이 `https://www.ebay.com` 으로 연결되어 있습니다. 실제 리스팅 URL로 바꿔주세요.
-   위치: 히어로 / 가격 섹션 / 한정수량 섹션 / 마지막 CTA — `index.html`(또는 템플릿)의 `https://www.ebay.com` **4곳**.
+   위치: 가격 섹션 / 한정수량 섹션 / 마지막 CTA — `index.html`(또는 템플릿)의 `https://www.ebay.com` **3곳**. (히어로는 브랜드 선언 카피로 교체되어 상단에는 구매 버튼이 없습니다.)
 
 2. **이메일 폼 (Formspree)**
    `무료 코디 이미지팩` 폼은 [Formspree](https://formspree.io) 무료 폼으로 동작합니다.

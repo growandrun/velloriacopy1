@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Velloria — 손목 위 조용한 우아함</title>
-<meta name="description" content="비싼 척하지 않아도 손목 위 분위기는 충분히 고급스러울 수 있습니다. 매일의 데일리룩에 조용한 우아함을 더하는 Velloria 팔찌.">
+<meta name="description" content="우아함은 가격이 아니라 선택에서 시작됩니다. 좋은 취향이 당신을 우아하게 만듭니다 — 데일리 주얼리 Velloria.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="format-detection" content="telephone=no">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Velloria — 손목 위 조용한 우아함">
-<meta property="og:description" content="과하지 않지만 가까이 볼수록 예쁜 데일리 팔찌. BEST 2개 세트 49,000원.">
+<meta property="og:description" content="비싼 주얼리가 아니라 좋은 취향이 당신을 우아하게 만듭니다. 데일리 주얼리, Velloria.">
 <meta property="og:locale" content="ko_KR">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23141414'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='18' fill='%23fff' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
 <script>document.documentElement.classList.add('js')</script>
@@ -129,6 +129,14 @@ p{margin:0}
 .scrollcue .t{font-family:var(--scd);font-weight:500;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink3)}
 .scrollcue .ln{width:1px;height:40px;background:var(--line);position:relative;overflow:hidden}
 .scrollcue .ln::after{content:"";position:absolute;top:-40px;left:0;width:1px;height:40px;background:var(--ink);animation:cue 1.8s var(--ease) infinite}
+.hero-lead{font-family:var(--suit);font-weight:300;font-size:clamp(15px,2vw,19px);line-height:1.6;letter-spacing:-.01em;color:var(--ink2);margin:0 0 18px;opacity:0;animation:fade-up .9s ease .1s forwards}
+
+/* manifesto */
+.manifesto-sec{padding:clamp(46px,7vw,84px) 0 clamp(56px,8vw,96px)}
+.manifesto{font-family:var(--suit);font-weight:300;font-size:clamp(19px,2.6vw,27px);line-height:1.6;letter-spacing:-.018em;color:var(--ink2);margin:0}
+.manifesto+.manifesto{margin-top:clamp(22px,3.4vw,34px)}
+.manifesto.brand{color:var(--ink);font-weight:500}
+.manifesto.climax{color:var(--ink);font-weight:600;font-size:clamp(24px,3.8vw,38px);letter-spacing:-.024em;margin-top:clamp(10px,1.6vw,16px)}
 
 /* reveal system — progressive: hidden state applies only when JS is active (html.js),
    so content is always visible if JS fails or is disabled */
@@ -298,7 +306,7 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   html{scroll-behavior:auto}
   [data-reveal]{opacity:1!important;transform:none!important;clip-path:none!important}
-  .hero h1 .ln>span,.hero .sub,.hero .herocta,.adv .it,.scrollcue{opacity:1!important;transform:none!important}
+  .hero h1 .ln>span,.hero .hero-lead,.hero .sub,.hero .herocta,.adv .it,.scrollcue{opacity:1!important;transform:none!important}
   .hero .arc path{stroke-dashoffset:0!important}
 }
 </style>
@@ -307,13 +315,13 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
 
 <div class="progress" id="progress"></div>
 <div class="topbar"><div class="track">
-  <span>무료 코디 이미지팩 증정</span><span>·</span><span>BEST 2개 세트 49,000원</span><span>·</span><span>손목 위 조용한 우아함</span><span>·</span><span>Velloria</span><span>·</span>
-  <span>무료 코디 이미지팩 증정</span><span>·</span><span>BEST 2개 세트 49,000원</span><span>·</span><span>손목 위 조용한 우아함</span><span>·</span><span>Velloria</span><span>·</span>
+  <span>우아함은 가격이 아니라 선택에서 시작됩니다</span><span>·</span><span>좋은 취향이 당신을 우아하게 만듭니다</span><span>·</span><span>Velloria</span><span>·</span>
+  <span>우아함은 가격이 아니라 선택에서 시작됩니다</span><span>·</span><span>좋은 취향이 당신을 우아하게 만듭니다</span><span>·</span><span>Velloria</span><span>·</span>
 </div></div>
 <header class="head" id="head">
   <div class="wrap row">
     <a href="#top" class="wordmark">VELLORIA</a>
-    <a href="#price" class="shop">구매하기</a>
+    <a href="#price" class="shop">둘러보기</a>
   </div>
 </header>
 
@@ -326,25 +334,27 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
       <path class="thin" d="M18 45 C 92 104, 268 104, 342 45"/>
       <circle cx="120" cy="82" r="2"/><circle cx="180" cy="88" r="2.4"/><circle cx="240" cy="82" r="2"/>
     </svg>
-    <p class="eyebrow">Quiet Luxury · Daily Jewelry</p>
+    <p class="eyebrow">Quiet Luxury</p>
     <div class="spacer"></div>
+    <p class="hero-lead">비싼 주얼리가 당신을<br>우아하게 만드는 것은 아닙니다.</p>
     <h1>
-      <span class="ln"><span>비싼 척하지 않아도,</span></span>
-      <span class="ln"><span><b>손목 위 분위기</b>는</span></span>
-      <span class="ln"><span>충분히 고급스러울 수 있습니다.</span></span>
+      <span class="ln"><span>좋은 취향이 당신을</span></span>
+      <span class="ln"><span>우아하게 만듭니다.</span></span>
     </h1>
-    <p class="sub">은은하게 이어지는 팔찌 라인이 평범한 데일리룩에 조용한 우아함을 더해줍니다.<br>
-      과하지 않지만 눈에 들어오고, 부담스럽지 않지만 값어치를 느낄 수 있는 주얼리.</p>
-    <div class="adv">
-      <div class="it"><b>여리한 라인감</b><span>손목을 더 단정하고 여리하게 보여주는 라인.</span></div>
-      <div class="it"><b>어디에나 어울리는</b><span>니트·셔츠·원피스·데님에 자연스럽게.</span></div>
-      <div class="it"><b>본인용 &amp; 선물용</b><span>2개 세트로 부담 없이 함께.</span></div>
-    </div>
-    <div class="herocta" style="margin-top:38px">
-      <a class="cta" href="https://www.ebay.com" target="_blank" rel="noopener">2개 세트로 합리적으로 구매하기 <span class="ar">→</span></a>
-      <p class="cta-note"><b>BEST 구성 · 2개 세트 49,000원</b><br>혼자 하나, 선물용 하나로 가장 많이 선택됩니다.</p>
-    </div>
     <div class="scrollcue"><span class="t">Scroll</span><span class="ln"></span></div>
+  </div>
+</section>
+
+<!-- 1b. 브랜드 선언 (manifesto) -->
+<section class="manifesto-sec">
+  <div class="wrap narrow center">
+    <p class="manifesto" data-reveal="up">진짜 매력 있는 사람들은<br>가격보다 가치를 선택합니다.</p>
+    <p class="manifesto" data-reveal="up" style="--d:.06s">과시를 위해 소비하지 않고,<br>자신에게 어울리는 것을 고를 줄 압니다.</p>
+    <p class="manifesto brand" data-reveal="up" style="--d:.12s">Velloria는 그런 선택을 위해 만들어졌습니다.</p>
+    <p class="manifesto" data-reveal="up" style="--d:.06s">수백만 원의 명품이 아니어도,<br>충분히 아름다울 수 있다는 것.</p>
+    <p class="manifesto" data-reveal="up" style="--d:.12s">합리적인 가격으로<br>당신의 품격을 표현할 수 있다는 것.</p>
+    <div class="rule" data-reveal="scale" style="--d:.16s"></div>
+    <p class="manifesto climax" data-reveal="up" style="--d:.1s">우아함은 가격이 아니라<br>선택에서 시작됩니다.</p>
   </div>
 </section>
 
@@ -604,7 +614,7 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
     <div class="spacer"></div>
     <h2 data-reveal="up" style="--d:.06s;font-weight:300;font-size:clamp(26px,4.4vw,44px)">진짜 매력은<br>비싼 척에서 나오지 않습니다.</h2>
     <div class="rule" data-reveal="scale" style="--d:.12s;background:#fff"></div>
-    <p class="poetic" data-reveal="up" style="--d:.16s">비싸지 않아도 충분히 아름답게.<br>과하지 않아 더 오래 손이 가게.<br><b>오늘, 당신에게 어울리는 팔찌를.</b></p>
+    <p class="poetic" data-reveal="up" style="--d:.16s">비싸지 않아도 충분히 아름답게.<br>과하지 않아 더 오래 손이 가게.<br><b>우아함은, 당신의 선택에서 시작됩니다.</b></p>
     <div class="spacer"></div>
     <div class="slot wide" data-reveal="up" style="--d:.2s;max-width:560px;margin:0 auto"><span class="id">IMG-09</span><div class="d">검은 배경 위 팔찌가 은은하게 빛나는 클로즈업. 원석·금속 광택 선명. 첫 화면보다 조금 더 가까이 — “갖고 싶다”는 감정이 들도록.</div></div>
     <div class="spacer-l"></div>
