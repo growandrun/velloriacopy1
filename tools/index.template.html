@@ -23,7 +23,7 @@
 @font-face{font-family:"SCoreDream";font-style:normal;font-weight:500;font-display:swap;src:url(__SCD5__) format("woff2")}
 
 :root{
-  --bg:#FFFFFF;--band:#F5F4F2;--ink:#1A1A1A;--ink2:#6E6E6E;--ink3:#9A9893;--line:#E7E6E3;--black:#141414;
+  --bg:#FFFFFF;--band:#FDFCFB;--ink:#1A1A1A;--ink2:#6E6E6E;--ink3:#9A9893;--line:#EBEBEA;--black:#141414;
   --suit:"SUIT",-apple-system,sans-serif;--pre:"Pretendard",-apple-system,sans-serif;--scd:"SCoreDream",sans-serif;
   --wrap:1080px;--ease:cubic-bezier(.2,.7,.2,1);
 }
@@ -153,7 +153,8 @@ html.js [data-reveal="clip"]{clip-path:inset(0 0 100% 0)}
 
 /* image slots (replace with real photography) */
 /* img.slot — replaces old div.slot placeholders */
-img.slot{display:block;width:100%;height:auto;border-radius:6px;object-fit:cover}
+img.slot{display:block;width:100%;height:auto;border-radius:6px;object-fit:cover;
+  border:none;background:none;box-shadow:0 4px 24px rgba(0,0,0,.07)}
 img.slot.tall{aspect-ratio:3/4}
 img.slot.wide{aspect-ratio:16/9}
 img.slot.sq{aspect-ratio:1/1}
@@ -467,10 +468,10 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
       <div class="c"><div class="t">데님</div><div class="d">가볍지만 세련되게</div></div>
     </div>
     <div class="lookgrid">
-      <div class="look" data-reveal="up" style="--d:0s"><img class="slot tall" src="assets/IMG-04.jpg" alt="Velloria 팔찌 — Soft Knit Look" loading="lazy"><div class="name">Soft Knit Look</div></div>
-      <div class="look" data-reveal="up" style="--d:.08s"><img class="slot tall" src="assets/IMG-05.jpg" alt="Velloria 팔찌 — Clean Shirt Look" loading="lazy"><div class="name">Clean Shirt Look</div></div>
-      <div class="look" data-reveal="up" style="--d:.16s"><img class="slot tall" src="assets/IMG-06.jpg" alt="Velloria 팔찌 — Elegant Date Look" loading="lazy"><div class="name">Elegant Date Look</div></div>
-      <div class="look" data-reveal="up" style="--d:.24s"><img class="slot tall" src="assets/IMG-07.jpg" alt="Velloria 팔찌 — Casual Denim Look" loading="lazy"><div class="name">Casual Denim Look</div></div>
+      <div class="look" data-reveal="up" style="--d:0s"><img class="slot tall" src="assets/IMG-04.jpg" alt="Velloria 팔찌 — Soft Knit Look" loading="lazy"></div>
+      <div class="look" data-reveal="up" style="--d:.08s"><img class="slot tall" src="assets/IMG-05.jpg" alt="Velloria 팔찌 — Clean Shirt Look" loading="lazy"></div>
+      <div class="look" data-reveal="up" style="--d:.16s"><img class="slot tall" src="assets/IMG-06.jpg" alt="Velloria 팔찌 — Elegant Date Look" loading="lazy"></div>
+      <div class="look" data-reveal="up" style="--d:.24s"><img class="slot tall" src="assets/IMG-07.jpg" alt="Velloria 팔찌 — Casual Denim Look" loading="lazy"></div>
     </div>
   </div>
 </section>
