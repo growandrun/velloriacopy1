@@ -152,6 +152,12 @@ html.js [data-reveal="clip"]{clip-path:inset(0 0 100% 0)}
 
 
 /* image slots (replace with real photography) */
+/* img.slot — replaces old div.slot placeholders */
+img.slot{display:block;width:100%;height:auto;border-radius:6px;object-fit:cover}
+img.slot.tall{aspect-ratio:3/4}
+img.slot.wide{aspect-ratio:16/9}
+img.slot.sq{aspect-ratio:1/1}
+/* keep div.slot for any remaining placeholders */
 .slot{position:relative;overflow:hidden;border:1px dashed #CFCDC8;border-radius:6px;background:#FAFAF8;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;text-align:center;
   padding:26px 18px;color:var(--ink2);aspect-ratio:4/3;transition:transform .6s var(--ease),box-shadow .4s}
@@ -545,10 +551,10 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
     </div>
     <span class="tmpl-note" data-reveal="up">예시 · 실제 구매 후기로 교체하세요</span>
     <div class="reviews">
-      <div class="review" data-reveal="up" style="--d:0s"><span class="ex">예시</span><p class="cmt">“생각보다 과하지 않아서 매일 차기 좋아요.”</p><p class="ph">실제 구매 후기 영역</p></div>
-      <div class="review" data-reveal="up" style="--d:.08s"><span class="ex">예시</span><p class="cmt">“가격은 부담스럽지 않은데 손목 분위기가 훨씬 고급스러워 보여요.”</p><p class="ph">실제 구매 후기 영역</p></div>
-      <div class="review" data-reveal="up" style="--d:.16s"><span class="ex">예시</span><p class="cmt">“니트나 셔츠에 같이 차니까 훨씬 깔끔해 보여요.”</p><p class="ph">실제 구매 후기 영역</p></div>
-      <div class="review" data-reveal="up" style="--d:.24s"><span class="ex">예시</span><p class="cmt">“선물용으로 샀는데 은은해서 호불호가 적을 것 같아요.”</p><p class="ph">실제 구매 후기 영역</p></div>
+      <div class="review" data-reveal="up" style="--d:0s"><span class="ex">예시</span><p class="cmt">"생각보다 과하지 않아서 매일 차기 좋아요."</p><p class="ph">실제 구매 후기 영역</p></div>
+      <div class="review" data-reveal="up" style="--d:.08s"><span class="ex">예시</span><p class="cmt">"가격은 부담스럽지 않은데 손목 분위기가 훨씬 고급스러워 보여요."</p><p class="ph">실제 구매 후기 영역</p></div>
+      <div class="review" data-reveal="up" style="--d:.16s"><span class="ex">예시</span><p class="cmt">"니트나 셔츠에 같이 차니까 훨씬 깔끔해 보여요."</p><p class="ph">실제 구매 후기 영역</p></div>
+      <div class="review" data-reveal="up" style="--d:.24s"><span class="ex">예시</span><p class="cmt">"선물용으로 샀는데 은은해서 호불호가 적을 것 같아요."</p><p class="ph">실제 구매 후기 영역</p></div>
     </div>
   </div>
 </section>
@@ -593,7 +599,7 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
         <div data-reveal="up" style="--d:.2s"><a class="cta" href="https://www.ebay.com" target="_blank" rel="noopener">구성 확인하고 구매하기 <span class="ar">→</span></a></div>
       </div>
       <div data-reveal="right" style="--d:.1s">
-        <img class=”slot” src=”assets/IMG-08.jpg” alt=”Velloria 소량 제작 패키지” loading=”lazy”>
+        <img class="slot" src="assets/IMG-08.jpg" alt="Velloria 소량 제작 패키지" loading="lazy">
       </div>
     </div>
   </div>
@@ -608,7 +614,7 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
     <div class="rule" data-reveal="scale" style="--d:.12s;background:#fff"></div>
     <p class="poetic" data-reveal="up" style="--d:.16s">비싸지 않아도 충분히 아름답게.<br>과하지 않아 더 오래 손이 가게.<br><b>우아함은, 선택입니다.</b></p>
     <div class="spacer"></div>
-    <img class=”slot wide” src=”assets/IMG-09.jpg” alt=”Velloria 팔찌 마지막 클로즈업 — 갖고 싶은 감정” loading=”lazy” data-reveal=”up” style=”--d:.2s;max-width:560px;margin:0 auto;display:block”>
+    <img class="slot wide" src="assets/IMG-09.jpg" alt="Velloria 팔찌 마지막 클로즈업 — 갖고 싶은 감정" loading="lazy" data-reveal="up" style="--d:.2s;max-width:560px;margin:0 auto;display:block">
     <div class="spacer-l"></div>
     <div data-reveal="up" style="--d:.24s">
       <a class="cta inv" href="https://www.ebay.com" target="_blank" rel="noopener">2개 세트로 합리적으로 구매하기 <span class="ar">→</span></a>
