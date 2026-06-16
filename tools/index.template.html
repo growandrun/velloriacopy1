@@ -71,11 +71,12 @@ p{margin:0}
 /* header */
 .head{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:saturate(140%) blur(10px);
   border-bottom:1px solid transparent;transition:border-color .3s,background .3s,height .3s}
-.head .row{display:flex;align-items:center;justify-content:space-between;height:66px;transition:height .3s}
+.head .row{display:flex;align-items:center;justify-content:center;height:66px;transition:height .3s;position:relative}
 .head.scrolled{border-bottom-color:var(--line)}
 .head.scrolled .row{height:54px}
-.wordmark{font-family:var(--suit);font-weight:600;letter-spacing:.32em;font-size:14px;color:var(--ink);padding-left:.32em}
-.head .shop{font-family:var(--scd);font-weight:500;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+.wordmark{display:flex;align-items:center;color:var(--ink)}
+.logo-svg{width:clamp(130px,16vw,200px);height:auto;display:block}
+.head .shop{position:absolute;right:0;font-family:var(--scd);font-weight:500;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
   color:var(--ink);border:1px solid var(--line);padding:9px 16px;border-radius:2px;transition:.25s}
 .head .shop:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
 
@@ -316,7 +317,11 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
 </div></div>
 <header class="head" id="head">
   <div class="wrap row">
-    <a href="#top" class="wordmark">VELLORIA</a>
+    <a href="#top" class="wordmark" aria-label="Velloria">
+      <svg class="logo-svg" viewBox="0 0 340 42" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <text x="170" y="32" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="400" letter-spacing="6" fill="currentColor">VELLORIA</text>
+      </svg>
+    </a>
     <a href="#price" class="shop">둘러보기</a>
   </div>
 </header>
