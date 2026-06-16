@@ -112,14 +112,20 @@ p{margin:0}
 .hero .arc circle:nth-of-type(2){animation-delay:1.9s}
 .hero .arc circle:nth-of-type(3){animation-delay:2.2s}
 .hero h1{font-family:var(--suit);font-weight:800;font-size:clamp(24px,4.2vw,42px);line-height:1.4;letter-spacing:-.022em;color:var(--ink)}
-.hero h1 .ln{display:block;overflow:hidden}
-.hero h1 .ln>span{display:inline-block;transform:translateY(115%);animation:rise-in .9s var(--ease) forwards}
-.hero h1 .ln:nth-child(1)>span{animation-delay:.15s}
-.hero h1 .ln:nth-child(2)>span{animation-delay:.3s}
-.hero h1 .ln:nth-child(3)>span{animation-delay:.45s}
+.hero h1 .ln{display:block}
+.hero h1 .ln>span{display:inline-block}
 .hero h1 b{font-weight:800}
-.hero .sub{opacity:0;animation:fade-up 1s ease .7s forwards;max-width:600px;margin-left:auto;margin-right:auto}
-.hero .herocta{opacity:0;animation:fade-up 1s ease .95s forwards}
+.hero .sub{max-width:600px;margin-left:auto;margin-right:auto}
+.hero .herocta{}
+/* hero entrance — only when JS+motion allowed; content stays visible without it */
+html.js.motion .hero h1 .ln{overflow:hidden}
+html.js.motion .hero h1 .ln>span{transform:translateY(115%);animation:rise-in .9s var(--ease) forwards}
+html.js.motion .hero h1 .ln:nth-child(1)>span{animation-delay:.15s}
+html.js.motion .hero h1 .ln:nth-child(2)>span{animation-delay:.3s}
+html.js.motion .hero h1 .ln:nth-child(3)>span{animation-delay:.45s}
+html.js.motion .hero .sub{opacity:0;animation:fade-up 1s ease .7s forwards}
+html.js.motion .hero .herocta{opacity:0;animation:fade-up 1s ease .95s forwards}
+html.js.motion .hero-lead{opacity:0;animation:fade-up .9s ease .15s forwards}
 .adv{display:flex;flex-wrap:wrap;gap:0;justify-content:center;margin:42px auto 0;max-width:760px;border-top:1px solid var(--line)}
 .adv .it{flex:1 1 220px;min-width:200px;padding:20px 18px;text-align:left;border-bottom:1px solid var(--line);
   opacity:0;animation:fade-up .9s ease forwards}
@@ -130,7 +136,7 @@ p{margin:0}
 .scrollcue .t{font-family:var(--scd);font-weight:500;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink3)}
 .scrollcue .ln{width:1px;height:40px;background:var(--line);position:relative;overflow:hidden}
 .scrollcue .ln::after{content:"";position:absolute;top:-40px;left:0;width:1px;height:40px;background:var(--ink);animation:cue 1.8s var(--ease) infinite}
-.hero-lead{font-family:var(--suit);font-weight:300;font-size:clamp(15px,2vw,19.5px);line-height:1.65;letter-spacing:-.01em;color:var(--ink2);margin:0 0 clamp(14px,2vw,20px);opacity:0;animation:fade-up .9s ease .15s forwards}
+.hero-lead{font-family:var(--suit);font-weight:300;font-size:clamp(15px,2vw,19.5px);line-height:1.65;letter-spacing:-.01em;color:var(--ink2);margin:0 0 clamp(14px,2vw,20px)}
 
 /* manifesto */
 .manifesto-sec{padding:clamp(46px,7vw,84px) 0 clamp(56px,8vw,96px)}
@@ -140,15 +146,15 @@ p{margin:0}
 .manifesto b{color:var(--ink);font-weight:500}
 .manifesto.climax{color:var(--ink);font-weight:600;font-size:clamp(24px,3.8vw,38px);letter-spacing:-.024em;margin-top:clamp(10px,1.6vw,16px)}
 
-/* reveal system — progressive: hidden state applies only when JS is active (html.js),
-   so content is always visible if JS fails or is disabled */
-html.js [data-reveal]{opacity:0;transition:opacity 1s ease,transform 1.1s cubic-bezier(.16,1,.3,1),clip-path 1.1s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s);will-change:opacity,transform}
-html.js [data-reveal="up"]{transform:translateY(28px)}
-html.js [data-reveal="scale"]{transform:scale(.93)}
-html.js [data-reveal="left"]{transform:translateX(-34px)}
-html.js [data-reveal="right"]{transform:translateX(34px)}
-html.js [data-reveal="clip"]{clip-path:inset(0 0 100% 0)}
-[data-reveal].in{opacity:1;transform:none;clip-path:inset(0 0 0 0)}
+/* reveal system — content always visible by default; .in adds cosmetic entrance */
+[data-reveal]{transition:opacity .9s ease,transform 1.1s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s)}
+html.js [data-reveal]:not(.in){opacity:0}
+html.js [data-reveal="up"]:not(.in){transform:translateY(28px)}
+html.js [data-reveal="scale"]:not(.in){transform:scale(.93)}
+html.js [data-reveal="left"]:not(.in){transform:translateX(-34px)}
+html.js [data-reveal="right"]:not(.in){transform:translateX(34px)}
+/* hard safety: after .done class (1s timeout), force all reveals visible */
+html.done [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}
 
 
 /* image slots (replace with real photography) */
@@ -636,17 +642,25 @@ footer .legal{font-family:var(--pre);font-size:11px;color:#6a6a6a;margin-top:24p
 <script>
 (function(){
   var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var html=document.documentElement;
   var reveals=[].slice.call(document.querySelectorAll('[data-reveal]'));
   var counters=[].slice.call(document.querySelectorAll('[data-count]'));
   var px=[].slice.call(document.querySelectorAll('[data-parallax]'));
   var head=document.getElementById('head'),bar=document.getElementById('progress');
   function fmt(n){return n.toLocaleString('ko-KR');}
   function showAll(){reveals.forEach(function(el){el.classList.add('in');});reveals=[];
-    counters.forEach(function(el){el.textContent=fmt(+el.getAttribute('data-count'));});counters=[];}
+    counters.forEach(function(el){el.textContent=fmt(+el.getAttribute('data-count'));});counters=[];
+    html.classList.add('done');}
+
+  // add motion class only when motion is allowed — gates hero CSS animations
+  if(!rm){html.classList.add('motion');}
 
   // reduced motion: reveal everything now, final prices, no parallax
   if(rm){showAll();px=[];}
   else{counters.forEach(function(el){el.textContent='0';});}
+
+  // hard failsafe: after 1.2s, force all reveals visible regardless of scroll state
+  setTimeout(function(){if(reveals.length>0){showAll();}},1200);
 
   function countUp(el){var target=+el.getAttribute('data-count'),dur=1200,t0=performance.now();
     (function tick(now){var p=Math.min(1,(now-t0)/dur);el.textContent=fmt(Math.round((1-Math.pow(1-p,3))*target));if(p<1)requestAnimationFrame(tick);})(t0);}
